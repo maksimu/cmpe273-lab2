@@ -20,10 +20,10 @@ node index.js
 
 * POST with JSON payload in the request body.
 ```sh
-curl -i http://localhost:8000/ -X POST -H "Content-Type: application/json" -d '{ "name" : "Foo" }'
+curl -i http://localhost:8000/ -X POST -H "Content-Type: application/json" -d '{ "name" : "Foo", "email":"email@gmail.com" }'
 ```
 
-* GET
+* GET go check if connection to the server works
 ```sh
 curl -i http://localhost:8000/ -X GET
 ```
@@ -31,7 +31,9 @@ curl -i http://localhost:8000/ -X GET
 * GET with setting **Cookies** in the request header.
 ```sh
 curl -i http://localhost:8000/ -X GET --cookie "session_id=99999"
-# Add -v to enable the verbose mode to see what you are sending in the request header.
+```
+Add -v to enable the verbose mode to see what you are sending in the request header.
+```sh
 curl -i http://localhost:8000/ -X GET --cookie "session_id=99999" -v
 ```
 
