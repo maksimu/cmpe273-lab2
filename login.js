@@ -24,7 +24,7 @@ Login.prototype.isLoggedIn = function (sessionId) {
 };
 
 /**
- * Create a new session id for the given user.
+ * Create a new session id for the given user .
  */
 Login.prototype.login = function (_name, _email) {
     /*
