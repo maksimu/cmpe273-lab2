@@ -3,6 +3,8 @@ cmpe273-lab2
 
 Node.JS with [Connect]
 
+Try this code [HERE]
+
 ### To Install Dependencies ###
 
 ```sh
@@ -44,3 +46,4 @@ curl -i http://localhost:8000/ -X DELETE --cookie "session_id=xxxxxxxxxx"
 ```
 
 [Connect]:http://www.senchalabs.org/connect/
+[HERE]:http://runnable.com/Uv_fhCtP3zcOAABV/cmpe273-lab2-for-node-js-and-connect
