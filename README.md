@@ -16,6 +16,11 @@ node index.js
 
 ### cURL commands
 
+* POST with JSON payload in the request body.
+```sh
+curl -i http://localhost:8000/ -X POST -H "Content-Type: application/json" -d '{ "name" : "Foo" }'
+```
+
 * GET
 ```sh
 curl -i http://localhost:8000/ -X GET
@@ -26,11 +31,6 @@ curl -i http://localhost:8000/ -X GET
 curl -i http://localhost:8000/ -X GET --cookie "session_id=99999"
 # Add -v to enable the verbose mode to see what you are sending in the request header.
 curl -i http://localhost:8000/ -X GET --cookie "session_id=99999" -v
-```
-
-* POST with JSON payload in the request body.
-```sh
-curl -i http://localhost:8000/ -X POST -H "Content-Type: application/json" -d '{ "name" : "Foo" }'
 ```
 
 * PUT with an optional cookie

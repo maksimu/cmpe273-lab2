@@ -70,12 +70,12 @@ Login.prototype.renew = function (sessionId) {
     /*
      * Generate unique session id and set it into sessionMap like foo@bar.com
      */
-    var sessionId = new Date().getTime();
-    this.sessionMap[sessionId] = { name: name, email: email }
+    var newSessionId = new Date().getTime();
+    this.sessionMap[newSessionId] = { name: name, email: email }
 
-    console.log('renew:: new session id %s for name=[%s] email=[%s]' , sessionId, name, email);
+    console.log('renew:: new session id %s for name=[%s] email=[%s]' , newSessionId, name, email);
 
-    return sessionId;
+    return newSessionId;
 };
 
 // Export the Login class

@@ -27,7 +27,7 @@ function main(request, response, next) {
             put(request, response);
             break;
     }
-};
+}
 
 function get(request, response) {
     var cookies = request.cookies;
@@ -43,7 +43,7 @@ function get(request, response) {
     } else {
         response.end("Please login via HTTP POST\n");
     }
-};
+}
 
 function post(request, response) {
 
@@ -53,7 +53,7 @@ function post(request, response) {
     var newSessionId = login.login(json.name, json.email);
 
     response.end(login.hello(newSessionId));
-};
+}
 
 function del(request, response) {
     var cookies = request.cookies;
@@ -72,7 +72,7 @@ function del(request, response) {
     } else {
         response.end("Please login via HTTP POST before logging out\n");
     }
-};
+}
 
 function put(request, response) {
     console.log("PUT:: Re-generate new seesion_id for the same user");
@@ -93,7 +93,7 @@ function put(request, response) {
     } else {
         response.end("Please login via HTTP POST before logging out\n");
     }
-};
+}
 
 app.listen(portToListen);
 
