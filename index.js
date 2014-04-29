@@ -51,6 +51,7 @@ function post(request, response) {
     console.log("POST:: name:%s, email:%s.", json.name, json.email);
 
     var newSessionId = login.login(json.name, json.email);
+    response.setHeader('Set-Cookie', 'session_id=' + newSessionId);
 
     response.end(login.hello(newSessionId));
 }
@@ -84,6 +85,7 @@ function put(request, response) {
         if (login.isLoggedIn(sid)) {
             console.log("DELETE:: Logout from the server. Session id=[%s]", sid);
             var newSessionId = login.renew(sid);
+            response.setHeader('Set-Cookie', 'session_id=' + sid);
 
             response.end('Session renewed to [' + newSessionId + ']\n');
 
